@@ -3128,3 +3128,34 @@ body.scrapbook-theme {
     height: 104px;
   }
 }
+
+/* WeChat handles mailto itself, so its fallback is an unobtrusive copy status. */
+.scrapbook-theme .email-copy-notice {
+  position: fixed;
+  bottom: max(20px, env(safe-area-inset-bottom));
+  left: 50%;
+  z-index: 2000;
+  width: max-content;
+  max-width: calc(100vw - 32px);
+  padding: 10px 14px;
+  color: #fffdf8;
+  font-family: "Inter", "Noto Sans SC", sans-serif;
+  font-size: .82rem;
+  line-height: 1.45;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, .22);
+  border-radius: 12px;
+  background: rgba(61, 75, 64, .92);
+  box-shadow: 0 12px 26px rgba(40, 60, 45, .18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 10px);
+  transition: opacity .18s ease, transform .18s ease;
+}
+
+.scrapbook-theme .email-copy-notice.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
