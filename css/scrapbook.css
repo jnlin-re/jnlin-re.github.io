@@ -3087,6 +3087,32 @@ body.scrapbook-theme {
   );
 }
 
+.scrapbook-theme .mentor-link,
+.scrapbook-theme .author-profile-link {
+  text-decoration-line: underline;
+  text-decoration-color: rgba(201, 147, 159, .52);
+  text-decoration-thickness: 1px;
+  text-underline-offset: .16em;
+}
+
+.scrapbook-theme .mentor-link:hover,
+.scrapbook-theme .author-profile-link:hover {
+  color: #754d5a;
+  text-decoration-color: var(--accent-rose);
+}
+
+.scrapbook-theme .pub-authors .author-profile-link {
+  color: #8b6270;
+  font-weight: 600;
+}
+
+.scrapbook-theme .mentor-link:focus-visible,
+.scrapbook-theme .author-profile-link:focus-visible {
+  outline: 2px solid rgba(201, 147, 159, .72);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
 .scrapbook-theme .pub-links a,
 .scrapbook-theme .current-version-link {
   color: #946b76;
